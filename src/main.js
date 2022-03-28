@@ -49,9 +49,6 @@ let string =`/* 你好，我叫Mx
 }
 /* 让八卦旋转起来
  **/
-#div1{
-    animation: x 10s infinite linear;
-}
 @keyframes x {
   from {
     transform: translateX(-50%) rotate(0deg);
@@ -60,9 +57,12 @@ let string =`/* 你好，我叫Mx
     transform: translateX(-50%) rotate(360deg);
   }
 }
+#div1{
+    animation: x 10s  linear infinite;
+}
 `;
-let string2 = "";
 let n = 0;
+let string2 = "";
 
 let step = ()=>{
     setTimeout(()=>{
