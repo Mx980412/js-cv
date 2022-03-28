@@ -6,7 +6,7 @@ let string =`/* 你好，我叫Mx
  * 首先我要准备一个div
  **/
 #div1{
-    border:1px solid red;
+    border:1px solid black;
     width:200px;
     height:200px;
 }
@@ -47,6 +47,19 @@ let string =`/* 你好，我叫Mx
     border-radius:50%;
     background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(255,255,255,1) 25%, rgba(255,255,255,1) 100%);
 }
+/* 让八卦旋转起来
+ **/
+#div1{
+    animation: x 10s infinite linear;
+}
+@keyframes x {
+  from {
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to {
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
 `;
 let string2 = "";
 let n = 0;
@@ -64,7 +77,7 @@ let step = ()=>{
         }     
         html.innerHTML = string2;
         style.innerHTML = string.substring(0,n);
-        window.scrollTo(0,99999);
+        window.scrollTo(0,99999); //定位页面滚动条
         html.scrollTo(0,99999);
         if(n < string.length-1){
             //如果n不是最后一个，就继续

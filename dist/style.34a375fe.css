@@ -16,7 +16,7 @@
 }
 
 #html {
-  word-break: break-all;
+  word-break: break-all; /* 到页面最右边自动折行 */
 }
 
 #div1 {
